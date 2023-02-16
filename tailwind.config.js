@@ -6,6 +6,13 @@ module.exports = {
       backgroundImage: {
         "footer-pg": "url('./Assets/footerBG.png')",
       },
+      colors: {
+        primary: "#141712",
+        secondary: "#547A37",
+      },
+      fontFamily: {
+        poppins: "'Poppins'",
+      },
     },
   },
   plugins: [],
