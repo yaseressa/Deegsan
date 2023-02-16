@@ -1,7 +1,12 @@
 import React from "react";
+import RecycleSidebar from "../components/RecycleSidebar";
 
 const Recycling = () => {
-  return <div>Recycling</div>;
+  return (
+    <div>
+      <RecycleSidebar />
+    </div>
+  );
 };
 
 export default Recycling;
