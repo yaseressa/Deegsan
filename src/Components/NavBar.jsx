@@ -30,7 +30,7 @@ function NavBar() {
         )}
 
         <div className="flex-1  hidden md:flex justify-center items-center">
-          <ul className="text-white flex justify-evenly w-[60%] underline">
+          <ul className="text-white flex justify-evenly w-[200px] underline">
             <li>
               <a href="#">Home</a>
             </li>
@@ -43,7 +43,7 @@ function NavBar() {
           </ul>
         </div>
         <div className="flex-1 hidden md:flex justify-end ">
-          <ul className="flex justify-evenly text-white w-[37%] underline">
+          <ul className="flex justify-evenly text-white w-[130px] underline">
             <li>
               <a href="#">Login</a>
             </li>
@@ -63,7 +63,7 @@ function NavBar() {
             ease: "easeOut",
             duration: 2,
           }}
-          className="bg-secondary font-medium text-primary text-lg absolute w-[100%] z-20"
+          className="bg-secondary font-medium md:hidden text-primary text-lg absolute w-[100%] z-20"
         >
           <ul className="text-white flex flex-col justify-evenly items-center w-[100%] z-10">
             <li className="h-8 p-6">

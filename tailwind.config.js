@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "footer-pg": "url('./Assets/footerBG.png')",
+        back: "url('./Assets/landingBG.jpg')",
       },
       colors: {
         primary: "#141712",
