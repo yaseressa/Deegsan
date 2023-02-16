@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { GiCrossMark } from "react-icons/gi";
+import { motion } from "framer-motion";
 function NavBar() {
   const [drop, setDrop] = useState(0);
   return (
     <>
-      <div className="bg-stone-900 w-[100%] h-28 bg-0 md:px-32 px-3 flex justify-between items-center text-md font-poppins">
-        <div className="capitalize text-white underline flex-1">
+      <div className="fixed bg-primary w-[100%] h-28 bg-0 md:px-32 px-3 flex justify-between items-center text-md font-poppins z-40">
+        <div className="capitalize text-white underline flex-1 z-40">
           <p className="font-bold text-2xl text-center md:text-left">
             Dheegsan
           </p>
@@ -14,14 +15,14 @@ function NavBar() {
 
         {!drop ? (
           <div
-            className="flex-1 md:hidden flex justify-end translate-x-[-20px]"
+            className="flex-1 md:hidden flex justify-end translate-x-[-20px] z-40"
             onClick={() => setDrop(1)}
           >
             <HiOutlineMenuAlt2 className="text-secondary" size={30} />
           </div>
         ) : (
           <div
-            className="flex-1 md:hidden flex justify-end translate-x-[-20px]"
+            className="flex-1 md:hidden flex justify-end translate-x-[-20px] z-40"
             onClick={() => setDrop(0)}
           >
             <GiCrossMark className="text-secondary" size={30} />
@@ -52,9 +53,19 @@ function NavBar() {
           </ul>
         </div>
       </div>
+
       {drop && (
-        <div className="bg-secondary font-medium text-primary text-lg absolute w-[100%] z-20">
-          <ul className="text-white flex flex-col justify-evenly items-center w-[100%]">
+        <motion.div
+          initial={{ translateY: "-100%" }}
+          animate={{ translateY: "45%" }}
+          transition={{
+            type: "spring",
+            ease: "easeOut",
+            duration: 2,
+          }}
+          className="bg-secondary font-medium text-primary text-lg absolute w-[100%] z-20"
+        >
+          <ul className="text-white flex flex-col justify-evenly items-center w-[100%] z-10">
             <li className="h-8 p-6">
               <a href="#">Home</a>
             </li>
@@ -76,7 +87,7 @@ function NavBar() {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
       )}
     </>
   );
