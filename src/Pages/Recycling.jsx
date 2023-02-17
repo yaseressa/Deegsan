@@ -1,5 +1,5 @@
-import React from 'react';
-import RecycleSidebar from '../Components/RecycleSidebar';
+import React from "react";
+import RecycleSidebar from "../components/RecycleSidebar";
 
 const Recycling = () => {
   return (
