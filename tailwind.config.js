@@ -3,11 +3,6 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        display: ['"Rammetto One"'],
-        body: ['"Poppins"'],
-      },
-
       colors: {
         primary: '#141712',
         secondary: '#547A37',
@@ -19,6 +14,8 @@ module.exports = {
       },
 
       fontFamily: {
+        display: ['"Rammetto One"'],
+        body: ['"Poppins"'],
         poppins: "'Poppins'",
       },
     },
