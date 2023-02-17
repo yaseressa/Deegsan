@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+  const [fullName, setFullname] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [other, setOther] = useState('');
+  const [password, setPassowrd] = useState('');
+
+  const handleClick = () => {
+    console.log(email, password, fullName, other, username);
+  };
+
   return (
     <div>
-      <div className="flex h-screen w-screen bg-[#151712] font-body">
+      <div className="flex h-screen w-screen bg-[#151712] font-body text-white">
         <div className="mx-auto flex max-w-4xl flex-col justify-center gap-24 align-middle max-[665px]:my-auto">
           <h1 className="text-center text-3xl font-bold text-[#669542] underline stroke-white outline-2 font-display">
             Signup your account
@@ -11,6 +23,7 @@ const SignUp = () => {
 
           <div className="mx-auto flex flex-col gap-4">
             <input
+              onChange={(e) => setFullname(e.target.value)}
               type="text"
               name=""
               id=""
@@ -28,6 +41,7 @@ const SignUp = () => {
 
             <div className="flex gap-4">
               <input
+                onChange={(e) => setUsername(e.target.value)}
                 type="text"
                 name=""
                 id=""
@@ -36,6 +50,7 @@ const SignUp = () => {
               />
 
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 name=""
                 id=""
@@ -46,6 +61,7 @@ const SignUp = () => {
 
             <div className="flex gap-4">
               <input
+                onChange={(e) => setPassowrd(e.target.value)}
                 type="password"
                 name=""
                 id=""
@@ -54,7 +70,8 @@ const SignUp = () => {
               />
 
               <input
-                type="password"
+                onChange={(e) => setOther(e.target.value)}
+                type="text"
                 name=""
                 id=""
                 placeholder="Other"
@@ -62,7 +79,10 @@ const SignUp = () => {
               />
             </div>
 
-            <button className="bg-[#669542]/80 py-2 rounded-lg font-medium text-white">
+            <button
+              onClick={handleClick}
+              className="bg-[#669542]/80 py-2 rounded-lg font-medium text-white"
+            >
               Confirm
             </button>
           </div>
@@ -70,13 +90,19 @@ const SignUp = () => {
           <p className="text-center text-gray-300 text-xs font-medium">
             If you have not an account please create an <br />
             account click{' '}
-            <a href="#" className="text-[#669542] font-semibold">
-              Signup{' '}
-            </a>
+            <Link
+              to="/login"
+              className="text-[#669542] font-semibold cursor-pointer"
+            >
+              Login{' '}
+            </Link>
             or go back{' '}
-            <a href="#" className="text-[#669542] font-semibold">
-              Home
-            </a>
+            <Link
+              to="/"
+              className="text-[#669542] font-semibold cursor-pointer"
+            >
+              Home{' '}
+            </Link>
           </p>
         </div>
       </div>
