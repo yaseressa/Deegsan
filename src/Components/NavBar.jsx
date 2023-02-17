@@ -8,9 +8,9 @@ function NavBar() {
   const [drop, setDrop] = useState(0);
   return (
     <>
-      <div className="fixed bg-primary w-[100%] h-28 bg-0 md:px-32 px-3 flex justify-between items-center text-md font-poppins z-40">
-        <div className="capitalize text-white underline flex-1 z-40">
-          <p className="font-bold text-2xl text-center md:text-left">
+      <div className=" bg-primary/20 backdrop-blur-sm pt-4  md:px-32 px-3 flex justify-between items-center text-sm font-poppins font-medium">
+        <div className=" text-white underline flex-1 ">
+          <p className="font-semibold text-lg text-center md:text-left">
             Dheegsan
           </p>
         </div>
@@ -32,7 +32,7 @@ function NavBar() {
         )}
 
         <div className="flex-1  hidden md:flex justify-center items-center">
-          <ul className="text-white flex justify-evenly w-[200px] underline">
+          <ul className="text-white flex gap-x-5 underline">
             <li>
               <a href="#">Home</a>
             </li>
@@ -71,7 +71,7 @@ function NavBar() {
           }}
           className="bg-secondary font-medium md:hidden text-primary text-lg absolute w-[100%] z-20"
         >
-          <ul className="text-white flex flex-col justify-evenly items-center w-[100%] z-10">
+          <ul className="text-white flex flex-col h-[100%] justify-evenly items-center w-[100%] z-10">
             <li className="h-8 p-6">
               <Link to="/">Home</Link>
             </li>
