@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { HiOutlineMenuAlt2 } from 'react-icons/hi';
-import { GiCrossMark } from 'react-icons/gi';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import { GiCrossMark } from "react-icons/gi";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [drop, setDrop] = useState(0);
@@ -62,11 +62,11 @@ function NavBar() {
 
       {drop && (
         <motion.div
-          initial={{ translateY: '-100%' }}
-          animate={{ translateY: '45%' }}
+          initial={{ translateY: "-100%" }}
+          animate={{ translateY: "45%" }}
           transition={{
-            type: 'spring',
-            ease: 'easeOut',
+            type: "spring",
+            ease: "easeOut",
             duration: 2,
           }}
           className="bg-secondary font-medium md:hidden text-primary text-lg absolute w-[100%] z-20"

@@ -1,13 +1,13 @@
 import React from "react";
-import About from "../components/About";
-import Landing from "../components/Landing";
-import Services from "../components/Services";
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import About from "../Components/About";
+import Landing from "../Components/Landing";
+import Services from "../Components/Services";
+import Footer from "../Components/Footer";
+import NavBar from "../Components/NavBar";
 
 const Home = () => {
   return (
-    <div className="bg-primary h-fit pb-10">
+    <div className="bg-primary h-fit">
       <NavBar />
       <Landing />
       <About />
