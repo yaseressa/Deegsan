@@ -1,8 +1,8 @@
-import React from "react";
-import aboutimg from "../Assets/aboutImage.png";
-import about from "../Assets/About.png";
-import eye from "../Assets/eye.svg";
-import charity from "../Assets/charity.svg";
+import React from 'react';
+import aboutimg from '../Assets/aboutImage.png';
+// import about from "../Assets/About.png";
+import eye from '../Assets/eye.svg';
+import charity from '../Assets/charity.svg';
 
 const About = () => {
   return (
