@@ -3,7 +3,6 @@ import Chart from '../Assets/Chart.png';
 import Logout from '../Assets/logOutIcon.svg';
 import Option from '../Assets/optionIcon.svg';
 import Info from '../Assets/infoIcon.svg';
-import MapImage from '../Assets/Map.png';
 
 const SideBar = () => {
   return (
@@ -146,20 +145,18 @@ const SideBar = () => {
 const Map = () => {
   return (
     <div className="bg-gray-700 w-full h-full">
-      {/* <img
-        src={MapImage}
-        alt=""
-        className="object-contain "
-        width="1100px"
-        height="auto"
-      /> */}
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62952.5909522311!2d44.02933454355361!3d9.548898149226293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1628bf87108c7219%3A0x61638d9da9bd62d2!2sHargeisa!5e0!3m2!1sen!2sso!4v1676641480898!5m2!1sen!2sso"
+        width="100%"
+        height="100%"
+      ></iframe>
     </div>
   );
 };
 
 const Geed = () => {
   return (
-    <div className="flex h-screen w-screen bg-[#151712] font-body">
+    <div className="flex max-[500px]:justify-center mx-auto max-[500px]:flex-wrap h-screen w-screen bg-[#151712] font-body">
       <SideBar />
       <Map />
     </div>
