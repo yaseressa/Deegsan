@@ -1,17 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
-  const [fullName, setFullname] = useState('');
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [other, setOther] = useState('');
-  const [password, setPassowrd] = useState('');
-
+  const [fullName, setFullname] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [other, setOther] = useState("");
+  const [password, setPassword] = useState("");
+  const [form, setForm] = useState({});
   const handleClick = () => {
-    console.log(email, password, fullName, other, username);
+    setForm({ email, password, fullName, other, username });
   };
+
+  useEffect(() => {
+    const headers = new Headers({
+      "Content-Type": "application/x-www-form-urlencoded",
+    });
+
+    fetch("http://localhost:3000/signup", {
+      method: "POST",
+      headers: headers,
+      body: {
+        full_name: fullName,
+        username: username,
+        password: password,
+        email: email,
+      },
+    });
+  }, [form]);
 
   return (
     <div>
@@ -61,7 +78,7 @@ const SignUp = () => {
 
             <div className="flex gap-4">
               <input
-                onChange={(e) => setPassowrd(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 name=""
                 id=""
@@ -89,19 +106,19 @@ const SignUp = () => {
 
           <p className="text-center text-gray-300 text-xs font-medium">
             If you have not an account please create an <br />
-            account click{' '}
+            account click{" "}
             <Link
               to="/login"
               className="text-[#669542] font-semibold cursor-pointer"
             >
-              Login{' '}
+              Login{" "}
             </Link>
-            or go back{' '}
+            or go back{" "}
             <Link
               to="/"
               className="text-[#669542] font-semibold cursor-pointer"
             >
-              Home{' '}
+              Home{" "}
             </Link>
           </p>
         </div>
